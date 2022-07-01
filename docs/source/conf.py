@@ -33,7 +33,7 @@ templates_path = ['_templates']
 import sphinx_readable_theme
 extensions = [
     ...
-    'sphinx_readable_theme',
+    'sphinx_readable_theme'
 ]
 html_theme = 'sphinx_readable_theme'
 
