@@ -1,34 +1,106 @@
 Usage
-=====
+-----
+
+.. _docker:
+
+Using docker image
+******************
+TBA
 
 .. _installation:
 
-Installation
-------------
+Manual installation
+*******************
 
-To use Lumache, first install it using pip:
+.. _requirements:
+
+Requirements
+============
+
+1. A **C++ compiler** that supports C++11 standard. GNU g++ 5.0 or newer will suffice
+
+2. **Boost::Program_options** library. Version 1.42 or newer. To install only this library, first download the source code from `https://www.boost.org <https://www.boost.org>`_. In the untarred source directory, run  
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   ./bootstrap.sh
+  
+In the same directory, build the library by running 
 
-Creating recipes
-----------------
+.. code-block:: console
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+   ./b2 --with-program_options -q
+  
+3. `MMG3D <https://www.mmgtools.org/mmg-remesher-downloads>`_
 
-.. autofunction:: lumache.get_random_ingredients
+4. Python 3.2+
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+5. Numpy for post-processing
 
-.. autoexception:: lumache.InvalidKindError
+6. Optional: For importing a mesh in the *ExodusII* format, you need to install the library, ``exodus``, which is available as a part of SEACAS project `https://github.com/gsjaardema/seacas/ <https://github.com/gsjaardema/seacas/>`_
 
-For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+.. _configuration:
 
+Configuration
+=============
+
+Modify ``BOOST_ROOT_DIR`` in Makefile if you manually built or installed boost library. If you followed the instructions above to build 
+``Boost::Program_options`` library, set ``BOOST_ROOT_DIR`` to the untarred boost directory.
+
+If you want to import an ``ExodusII`` mesh (.exo), set ``useexo = 1`` and ``ndims = 3``. Only 3D exodus mesh can be imported.
+* Set ``EXO_INCLUDE`` and ``EXO_LIB_DIR`` paths.
+
+.. _building:
+
+Building
+========
+
+* Run ``make`` to build optimized executable.
+* Or run ``make opt=0`` to build a debugging executable.
+* Or run ``make openmp=0`` to build the executable without ``OpenMP``. This is necessary to debug the code under valgrind.
+
+.. _running_des3d:
+
+Running DES3D
+*************
+
+.. code-block:: console
+
+   dynearthsol2d input.cfg
+   
+or
+
+.. code-block:: console
+
+   dynearthsol3d input.cfg
+   
+* Several example input files are provided under ``examples/`` directory. The
+  format of the input file is described in ``examples/defaults.cfg``.
+* Benchmark cases with analytical solution can be found under ``benchmarks/``
+  directory.
+* Execute the executable with ``-h`` flag to see the available input parameters
+  and their descriptions.
+
+.. _visualization:
+
+Visualizing outputs
+*******************
+
+To convert the binary output files to VTU files, run
+
+.. code-block:: console
+
+   2vtk.py modelname
+
+``modelname`` should be the one defined in the config file.
+
+To see more usage information, i.e., producing .VTP files for marker data, run
+
+.. code-block:: console
+
+   2vtk.py -h
+
+* Some of the simulation outputs can be disabled by editing ``2vtk.py`` and
+  ``output.cxx``. A more convenient control will be provided in the future.
+* The processed VTU (node and cell data) and VTP (marker data) files can be visualized with `Paraview <https://paraview.org>`_ or `Visit <https://visit-dav.github.io/visit-website/index.html>`_.
