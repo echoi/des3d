@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'des3d'
+copyright = '2022, Eunseo Choi'
+author = 'Eunseo Choi'
 
 release = '0.1'
 version = '0.1.0'
