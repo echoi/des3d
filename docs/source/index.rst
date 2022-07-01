@@ -1,13 +1,14 @@
-Welcome to Lumache's documentation!
+Welcome to DES3D's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**DES3D** or **DynEarthSol3D** (Dynamic Earth Solver in 3D) is a finite element code that solves the momentum balance and 
+the heat transfer in Lagrangian form using unstructured meshes. It can be
+used for studying long-term deformations of the Earth's lithosphere but certainly not limited to it.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
+
+DES3D has its documentation hosted on Read the Docs.
 
 .. note::
 
