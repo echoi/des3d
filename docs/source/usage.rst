@@ -82,6 +82,21 @@ or
 * Execute the executable with ``-h`` flag to see the available input parameters
   and their descriptions.
 
+Run-time warnings
+=================
+* While running, DES3D might print warnings on screen. An example is the warning about the potential race condition: e.g.,
+
+.. code-block:: console
+
+   ****************************************************************
+   *    Warning: egroup-0 and egroup-2 might share common nodes.
+   *             There is some risk of racing conditions.
+   *             Please either increase the resolution or
+   *             decrease the number OpenMP threads.
+   ****************************************************************
+
+* Please do pay attention and follow given suggestions if any.
+
 .. _visualization:
 
 Visualizing outputs
