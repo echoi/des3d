@@ -1,4 +1,6 @@
 DES3D documentation project
 ===========================
 
-Developers, modify files in `docs/source`.
+URL: https://des3d.readthedocs.io/en/latest/
+
+DES3D developers, modify files in `docs/source`.
