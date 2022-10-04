@@ -1,9 +1,4 @@
-Template for the Read the Docs tutorial
-=======================================
+DES3D documentation project
+===========================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+Developers, modify files in `docs/source`.
