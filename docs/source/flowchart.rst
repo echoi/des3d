@@ -69,7 +69,7 @@ dynearthsol.cxx
 ========
 * See Flowchart for summary of main function
 
-.. image:: C:\Grad School\DES_documentation\flowchart_main.png
+.. image:: des3d\docs\source\flowchart_main.png
    :width: 600
 
 
