@@ -62,6 +62,14 @@ Building
 
 .. _running_des3d:
 
+DES3D Source Code
+*************
+
+dynearthsol.cxx
+========
+* See Flowchart for summary of main function
+
+
 Running DES3D
 *************
 
