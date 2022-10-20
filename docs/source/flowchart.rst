@@ -62,7 +62,7 @@ Building
 
 .. _running_des3d:
 
-DES3D Source Code
+DES3D Structure
 *************
 
 dynearthsol.cxx
