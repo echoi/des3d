@@ -70,7 +70,7 @@ dynearthsol.cxx
 * See Flowchart for summary of main function
 
 .. image:: images\flowchart_main.png
-   :width: 600
+   :width: 400
 
 
 Running DES3D
