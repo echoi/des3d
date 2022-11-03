@@ -8,4 +8,4 @@ dynearthsol.cxx
 * See Flowchart for summary of main function
 
 .. image:: ./images/flowchart_main_pwpt.png
-   :width: 550
+   :width: 850
