@@ -7,5 +7,5 @@ dynearthsol.cxx
 ***************
 * See Flowchart for summary of main function
 
-.. image:: ./images/flowchart_main.png
-   :width: 250
+.. image:: ./images/flowchart_main_pwpt.png
+   
