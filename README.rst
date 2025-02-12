@@ -1,6 +1,7 @@
 DES3D documentation project
 ===========================
 
-URL: https://des3d.readthedocs.io/en/latest/
+**Discontinued as of February 12, 2025**
 
-DES3D developers, modify files in `docs/source`.
+- Renewed effort with Docusaurus (https://docusaurus.io): https://github.com/GeoFLAC/des3d/
+- Deployed site: https://geoflac.github.io/des3d/
